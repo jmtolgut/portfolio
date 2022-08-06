@@ -87,7 +87,11 @@ export const NavBar = () => {
                 >
                   <img src={navIcon2} alt="GitHub" />
                 </a>
-                <a href="http://www.infojobs.net/josemanuel-toledo-gutierrez.prf">
+                <a
+                  href="http://www.infojobs.net/josemanuel-toledo-gutierrez.prf"
+                  target="_Blank"
+                  rel="noreferrer"
+                >
                   <img src={navIcon3} alt="infojobs" />
                 </a>
               </div>
