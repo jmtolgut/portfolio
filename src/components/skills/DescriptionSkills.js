@@ -3,10 +3,9 @@ import TrackVisibility from "react-on-screen";
 import "animate.css";
 
 
-
-export const PrueSkillsMap = ({title, imgUrl, description}) => {
+export const DescriptionSkills = ({title, imgUrl, description}) => {
   return (
-    <Col size={12} sm={6} md={4}>
+    <Col size={12} sm={6} md={4} xs={6}>
     <TrackVisibility>
     {({ isVisible }) => (
                 <div
@@ -16,9 +15,9 @@ export const PrueSkillsMap = ({title, imgUrl, description}) => {
                       : ""
                   }
                 >
-    <div className="proj-imgbx">
+    <div className="proj-imgcard">
       <img src={imgUrl} alt="not found"/>
-      <div className="proj-txtx">
+      <div className="proj-card">
         <h4>{title}</h4>
         <span>{description}</span>
       </div>
