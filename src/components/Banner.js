@@ -2,16 +2,18 @@ import { useState, useEffect } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import headerImg from "../assets/img/header-img.svg";
 import { ArrowRightCircle } from "react-bootstrap-icons";
+import { HashLink } from "react-router-hash-link";
+import { BrowserRouter as Router } from "react-router-dom";
 import "animate.css";
 import TrackVisibility from "react-on-screen";
-// uuidsad
+
 export const Banner = () => {
   const [loopNum, setLoopNum] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
   const [text, setText] = useState("");
   const [delta, setDelta] = useState(300 - Math.random() * 100);
   const [index, setIndex] = useState(1);
-  const toRotate = ["Web Developer", "Web Designer", "UI/UX Designer"];
+  const toRotate = ["Web Developer junior", "Web Designer"];
   const period = 2000;
 
   const tick = () => {
@@ -40,7 +42,7 @@ export const Banner = () => {
       setIndex((prevIndex) => prevIndex + 1);
     }
   };
-  
+
   useEffect(() => {
     let ticker = setInterval(() => {
       tick();
@@ -50,7 +52,6 @@ export const Banner = () => {
       clearInterval(ticker);
     };
   }, [text]);
-
 
   return (
     <section className="banner" id="home">
@@ -67,26 +68,39 @@ export const Banner = () => {
                   }
                 >
                   <span className="tagline">Welcome to my Portfolio</span>
-                  <h1>
-                    {`Hi! I'm José Manuel`}{<br></br>}
+                  <h4>
+                    {`Hi! I'm José Manuel`}
+                    {<br></br>}
                     <span
                       className="txt-rotate"
                       dataperiod="1000"
-                      data-rotate='[ "Web Developer", "Web Designer", "UI/UX Designer" ]'
+                      data-rotate='[ "Web Developer Junior", "Web Designer" ]'
                     >
                       <span className="wrap">{text}</span>
                     </span>
-                  </h1>
+                  </h4>
                   <p>
-                    Lorem Ipsum is simply dummy text of the printing and
-                    typesetting industry. Lorem Ipsum has been the industry's
-                    standard dummy text ever since the 1500s, when an unknown
-                    printer took a galley of type and scrambled it to make a
-                    type specimen book.
+                    <strong>Hello!! delighted.</strong>
+                    <br />
+                    <span>
+                      I am a junior developer, which loves to learn any new
+                      technology.
+                    </span>
+                    <br />
+                    <span>
+                      My performance is focused on front-end in{" "}
+                      <strong>React</strong> which I love to work every day and
+                      improve myself professionally.
+                    </span>
                   </p>
-                  <button onClick={() => console.log("connect")}>
-                    Let’s Connect <ArrowRightCircle size={25} />
-                  </button>
+                  <Router>
+                    <HashLink to="#connect" style={{textDecoration:'none'}}>
+                      <button>
+                        <span>Let’s Connect</span>{" "}
+                        <ArrowRightCircle size={25} />
+                      </button>
+                    </HashLink>
+                  </Router>
                 </div>
               )}
             </TrackVisibility>
