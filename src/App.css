@@ -20,13 +20,15 @@
 
 /* ******* Carousel ******* */
 
+
+
 .carousel {
   overflow: hidden;
 }
 
 /* **** Project Cards ***** */
 .contentprojcard {
-  width: 500px !important;
+  width: 200px !important;
   height: auto !important;
 
 }
@@ -67,9 +69,10 @@
   opacity: 0;
   width: 100%;
 }
+
 .proj-card h4 {
-  font-size: 30px;
-  font-weight: 700;
+  font-size: 10px;
+  font-weight: 800;
   letter-spacing: 0.8px;
   line-height: 1.1em;
 }
@@ -246,6 +249,7 @@ span.navbar-text {
   font-weight: 700;
   color: #fff;
   border: 1px solid #fff;
+  border-radius: 21px;
   padding: 18px 34px;
   font-size: 18px;
   margin-left: 18px;
@@ -263,6 +267,7 @@ span.navbar-text {
   width: 0%;
   height: 100%;
   position: absolute;
+  border-radius: 21px;
   background-color: #fff;
   left: 0;
   top: 0;
@@ -339,7 +344,8 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   margin-top: 0;
   padding: 260px 0 100px 0;
   background-image: url('./assets/img/universe.jpeg');
-  background-position: top center;
+  filter: contrast(110%);
+  background-position: left center;
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -416,31 +422,43 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 }
 
 /************ Skills Css ************/
-.skill {
+
+.skillCard {
+
   padding: 0 0 50px 0;
   position: relative;
 }
 
-.skill-bx {
+.skillCard-bx {
+  box-shadow: 0px 20px 30px -20px rgb(182, 176, 176);
   background: #151515;
   border-radius: 64px;
   text-align: center;
   padding: 60px 50px;
   margin-top: -60px;
 }
+.skillCard-bs {
+  padding: 60px 50px;
+  margin-top: -60px;
+}
 
-.skill h2 {
+.skillCard h2 {
   font-size: 45px;
   font-weight: 700;
 }
 
-.skill p {
+.skillCard p {
   color: #B8B8B8;
   font-size: 18px;
   letter-spacing: 0.8px;
   line-height: 1.5em;
   margin: 14px 0 75px 0;
 }
+.item {
+  width: 80%;
+  margin: 0 auto 15px auto;
+}
+
 
 .skill-slider {
   width: 80%;
@@ -780,33 +798,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   margin-top: 20px;
 }
 
-/* *****StyledSkills***** */
 
-.skillCard {
-  padding: 0 0 50px 0;
-  position: relative;
-}
-
-.skillCard-bx {
-  background: #151515;
-  border-radius: 64px;
-  text-align: center;
-  padding: 60px 50px;
-  margin-top: -60px;
-}
-
-.skillCard h2 {
-  font-size: 45px;
-  font-weight: 700;
-}
-
-.skillCard p {
-  color: #B8B8B8;
-  font-size: 18px;
-  letter-spacing: 0.8px;
-  line-height: 1.5em;
-  margin: 14px 0 75px 0;
-}
 
 .background-image-left {
   top: 28%;
@@ -815,4 +807,3 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   width: 40%;
   z-index: -4;
 }
-
